@@ -94,6 +94,7 @@ li{
     text-align: center;
     border: none;
     color: #7342d6;
+    display: none;
 }
 
 .menu__backdrop{
@@ -104,9 +105,23 @@ li{
     right: 0;
     bottom: 0;
     z-index: 100;
-    display: flex;
+    display: flex; 
     justify-content: center;
     align-items: center;
+    transition: all 300ms ease;
+    opacity: 0;
+    visibility: hidden;
+    
+}
+
+.menu--open .menu__backdrop{
+    visibility: visible;
+    opacity: 1;
+}
+
+.menu--open{
+    max-height: 100vh;
+    overflow-y: hidden;
 }
 
 .menu__links{
@@ -118,7 +133,6 @@ li{
 .menu__list{
     padding: 32px 0;
 }
-
 
 
 .menu__link{
@@ -148,7 +162,7 @@ LANDING
 }
 
 header{
-    height: calc(100vh + 380px);
+    height: calc(100vh + 80px);
 }
 
 .header__container{
@@ -259,6 +273,7 @@ HIGHLIGHTS
 
 .hightlight__wrapper{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .hightlight{
@@ -266,7 +281,6 @@ HIGHLIGHTS
     width: calc(100%/3);
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     
 }
@@ -293,6 +307,7 @@ HIGHLIGHTS
 .hightlight__subtittle{
     font-size: 20px;
     margin-bottom: 16px;
+    text-align: center;
 }
 
 /*
@@ -403,4 +418,49 @@ footer{
 
 .footer__link{
     padding: 0 8px;
+}
+
+/* small phones, TB, Large Phones */
+@media(max-width:768px){
+    .header__description{
+        padding: 0 24px;
+    }
+
+    h1{
+        font-size: 40px;
+    }
+
+    h2{
+        font-size: 26px;
+    }
+
+    button{
+        font-size: 18px;
+    }
+
+    .book{
+        width: 50%;
+    }
+}
+
+
+
+/* small phones, Large Phones */
+
+@media( max-width:550px) {
+    .nav__link{
+        display: none;
+    }
+
+    .btn__menu{
+        display: block;
+    }
+
+    .hightlight{
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .hightlight:not(:last-child)
+
 }

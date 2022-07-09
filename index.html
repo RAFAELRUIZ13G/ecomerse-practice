@@ -7,8 +7,10 @@
     <title>Library</title>
     <link rel="stylesheet" href="Style.css" />
     <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </head>
-  <body>
+ 
+<body>
     <section id="landing">
       <nav>
         <div class="nav__container">
@@ -17,26 +19,26 @@
             <li><a href="" class="nav__link">Home</a></li>
             <li><a href="" class="nav__link">Contact</a></li>
             <li><a href="" class="nav__link nav__link--primary">Books</a></li>
-          </ul>
-        </div>
-        <button class="btn__menu">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="menu__backdrop">
-            <button class="button__menu btn__menu--close">
-                <i class="fas fa-times"></i>
+          </ul>       
+            <button class="btn__menu " onclick="openmenu()">
+                <i class="fas fa-bars"></i>
             </button>
-            <ul class="menu__links">
-                <li class="menu__list">
-                    <a href="#" class="menu__link">Home</a>
-                </li>
-                <li class="menu__list">
-                    <a href="#features" class="menu__link">Books</a>
-                </li>
-                <li class="menu__list">
-                    <a href="#" class="menu__link no-cursor">Contacts</a>
-                </li>
-            </ul> 
+            <div class="menu__backdrop">
+                <button class="button__menu btn__menu--close" onclick="closemenu()" >
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul class="menu__links">
+                    <li class="menu__list">
+                        <a href="#" class="menu__link" onclick="closemenu()" >Home</a>
+                    </li>
+                    <li class="menu__list">
+                        <a href="#features" class="menu__link" onclick="closemenu()">Books</a>
+                    </li>
+                    <li class="menu__list">
+                       <a href="#" class="menu__link no-cursor" onclick="closemenu()">Contacts</a>
+                    </li>
+                </ul> 
+            </div>
         </div>
       </nav>
       <header>
@@ -46,7 +48,9 @@
             <h2>
               Find your dream book with <span class="purple">Library</span>
             </h2>
-            <button class="btn">Browse books</button>
+            <a href="#features">
+                <button class="btn">Browse books</button>
+            </a>
           </div>
           <figure class="header__img--wrapper">
             <img src="./assets/Undraw_Books.svg" alt="" />
