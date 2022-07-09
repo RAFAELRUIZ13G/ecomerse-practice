@@ -458,9 +458,11 @@ footer{
 
     .hightlight{
         width: 100%;
-        margin-bottom: 24px;
     }
+    
+    .hightlight:not(:last-child){
+        margin-bottom: 24px;
 
-    .hightlight:not(:last-child)
+    }
 
 }
